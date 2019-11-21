@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Criando projeto React
+### `npx create-react-app react-material-ui-quickstart`
+
+Instalando material-ui
+### `npm install @material-ui/core`
+
+Icons
+### `npm install @material-ui/icons --save`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
