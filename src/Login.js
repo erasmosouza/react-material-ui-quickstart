@@ -6,6 +6,8 @@ import TextField        from '@material-ui/core/TextField';
 import InputAdornment   from '@material-ui/core/InputAdornment';
 import AccountCircle    from '@material-ui/icons/AccountCircle';
 import AppBar           from '@material-ui/core/AppBar';
+import Box              from '@material-ui/core/Box';
+import Link             from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
     margin: {
@@ -23,18 +25,14 @@ function Login() {
           <h1>Minha Empresa</h1>
         </AppBar>
 
-        <div 
-            style={{
-            display: "flex",
-            justifyContent: "center",
-            margin: 20,
-            padding: 20
-            }}>
-        
-        <form style={{ width: "50%" }}>
-          <h1>Seja bem vindo</h1>
-          
-
+        <Box style={{
+        position: 'absolute', left: '50%', top: '50%',
+        transform: 'translate(-50%, -50%)'
+    }}>
+          <Box>
+            <h1>Seja bem vindo</h1>
+          </Box>
+          <Box>
             <TextField
                 className={classes.margin}
                 id="input-login"
@@ -47,7 +45,9 @@ function Login() {
                 ),
                 }}
                 />
-        
+                
+          </Box>
+          <Box>
             <TextField
                 className={classes.margin}
                 type="password"
@@ -61,12 +61,35 @@ function Login() {
                 ),
                 }}
                 />
-        
+          </Box>
+          <Box>
             <Button variant="contained" color="primary" onClick={() => { console.log('Parabens!'); }}>
                 <VpnKeyIcon></VpnKeyIcon>
             </Button>
-            </form>
-        </div>
+          </Box>
+          <Box>
+          <Link
+              component="button"
+              variant="body2"
+              onClick={() => {
+                console.info("I'm a button.");
+              }}
+            >
+              Esqueci minha Senha
+            </Link>
+            <Link
+              component="button"
+              variant="body2"
+              onClick={() => {
+                console.info("I'm a button.");
+              }}
+            >
+              Cadastro
+            </Link>
+          </Box>
+
+      </Box>
+
     </div>
   );
 }
